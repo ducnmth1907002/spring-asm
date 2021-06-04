@@ -15,8 +15,6 @@ public class StreetController {
 
     @Autowired
     StreetService streetService;
-    @Autowired
-    DistrictService districtService;
 
     @RequestMapping(method = RequestMethod.POST)
     public StreetDTO create(@RequestBody StreetDTO streetDTO) {

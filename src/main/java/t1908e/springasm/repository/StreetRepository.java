@@ -6,9 +6,9 @@ import t1908e.springasm.entity.Street;
 import java.util.List;
 
 public interface StreetRepository extends JpaRepository<Street, Integer> {
-    public List<Street> findStreetByNameContainsAndDistrictId(String streetNamme, int districtId);
+    public List<Street> findStreetByNameContainsAndDistrictId(String streetName, int districtId);
 
-    public List<Street> findStreetByNameContains(String streetNamme);
+    public List<Street> findStreetByNameContains(String streetName);
 
     public List<Street> findStreetByDistrictId(int districtId);
 }

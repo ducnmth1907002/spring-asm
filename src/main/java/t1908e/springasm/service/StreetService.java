@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 @Configurable
 public class StreetService {
+
     @Autowired
     StreetRepository streetRepository;
     public Street create(Street street){
@@ -21,12 +22,14 @@ public class StreetService {
         return streetRepository.findAll();
     }
 
-    public List<Street> findStreetByNameContainsAndDistrictId( String nameStreet,int districtId){
-        return streetRepository.findStreetByNameContainsAndDistrictId(nameStreet,districtId);
+    public List<Street> findStreetByNameContainsAndDistrictId( String streetName,int districtId){
+        return streetRepository.findStreetByNameContainsAndDistrictId(streetName,districtId);
     }
-    public List<Street> findStreetByNameContains( String nameStreet){
-        return streetRepository.findStreetByNameContains(nameStreet);
+
+    public List<Street> findStreetByNameContains( String streetName){
+        return streetRepository.findStreetByNameContains(streetName);
     }
+    
     public List<Street> findStreetByDistrictId(int districtId){
         return streetRepository.findStreetByDistrictId(districtId);
     }
